@@ -9,26 +9,30 @@ export default function TextForm(props) {
     const handleRmSpacesClick = () => {
         let newText = text.replace(/\s+/g, ' ').trim()
         setText(newText);
+        props.showAlert("Removed extra spaces", "success");
     }
 
     const handleCopyClick = () => {
         navigator.clipboard.writeText(text);
+        props.showAlert("Text coppied", "success");
     }
 
     const handleClearClick = () => {
-        props.showAlert("You are going to clear all the text", "danger");
         let newText = '';
         setText(newText);
+        props.showAlert("Text cleared", "success");
     }
 
     const handleLoClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Text changed lower case", "success");
     }
 
     const handleUpClick = () => {
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Text changed upper case", "success");
     }
 
     const [text, setText] = useState('');
