@@ -8,7 +8,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  //Link,
 } from "react-router-dom";
 
 function App() {
@@ -46,7 +45,7 @@ function App() {
               element={
                 <TextForm
                   showAlert={showAlert}
-                  heading="Enter the text to analyze below"
+                  heading="Try Text Utils - Word Counter, Character Counter, Remove Extra Spaces"
                 />
               }
             />
